@@ -1,0 +1,196 @@
+// Header View Style
+.header {
+  box-shadow: 0 3px 6px #00000029;
+  hr {
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    border: 0;
+    background: transparent linear-gradient(91deg, #319795 0%, #3182CE 100%) 0 0 no-repeat padding-box;
+  }
+  a {
+    letter-spacing: 0.84px;
+  }
+}
+
+// Banner View Style
+.banner {
+  padding-top: 90px;
+  background: transparent linear-gradient(141deg, #EBF4FF 0%, #E6FFFA 100%) 0 0 no-repeat padding-box;
+  position: relative;
+  overflow: hidden;
+  p {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    line-height: 50px;
+  }
+  img {
+    max-width: 360px;
+  }
+  svg {
+    @screen lg {
+      transform: translateY(70px) scaleY(0.5);
+    }
+  }
+}
+
+// Main View Style
+.tabs {
+  &__moving {
+    width: calc((100% - 40px) / 3);
+    min-width: 160px;
+    height: 42px;
+    transform: translate(20px, -71px);
+    transition: all .3s;
+    &-first {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+    &-last {
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+  }
+  ul {
+    margin: 27px 20px 30px;
+    transform: translate(0, 0);
+    transition: all .3s;
+    li {
+      min-width: 160px;
+      width: calc((100% - 40px) / 3);
+      a {
+        border: 1px solid #CBD5E0;
+        letter-spacing: 0.84px;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  &__detail {
+    max-width: 360px;
+
+    p:first-child {
+      font-size: 130px;
+      line-height: 156px;
+    }
+    p:last-child {
+      font-size: 15.75px;
+      line-height: 19px;
+      letter-spacing: 0.47px;
+      margin-left: 16px;
+      margin-bottom: 35px;
+    }
+
+    &:nth-child(2) {
+      z-index: 1;
+      &::before {
+        content: "";
+        display: block;
+        z-index: -1;
+        position: absolute;
+        left: -30px;
+        bottom: -12px;
+        width: 200px;
+        height: 208px;
+        background-color: #F7FAFC;
+        border-radius: 50%;
+        opacity: 0.5;
+      }
+      img {
+        width: 220px;
+      }
+    }
+    &:nth-child(3) {
+      max-width: unset;
+      padding-left: 35px;
+      background: transparent linear-gradient(134deg, #E6FFFA 0%, #EBF4FF 100%) 0 0 no-repeat padding-box;
+      svg {
+        margin-left: -35px;
+      }
+      & > div {
+        max-width: 360px;
+      }
+    }
+    &:last-child {
+      padding-left: 54px;
+      height: 360px;
+
+      &::before {
+        content: "";
+        display: block;
+        z-index: 10;
+        position: absolute;
+        left: -25px;
+        top: 0;
+        width: 270px;
+        height: 303px;
+        background-color: #F7FAFC;
+        border-radius: 50%;
+      }
+      p:last-child {
+        margin-bottom: 55px;
+      }
+    }
+  }
+
+  &__content {
+    &:nth-child(2) {
+      .tabs__detail:nth-child(3) {
+        img {
+          margin-left: 78px;
+          width: 180px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .tabs__detail:last-child {
+        p:last-child {
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    &:last-child {
+      .tabs__detail:nth-child(3) {
+        img {
+          height: 148px;
+          margin-left: 68px;
+        }
+      }
+      .tabs__detail:last-child {
+        p:last-child {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
+// Bottom Style
+.bottom {
+  box-shadow: 0 -1px 3px #0003;
+
+  button {
+    letter-spacing: 0.84px;
+    background: transparent linear-gradient(95deg, #319795 0%, #3182CE 100%) 0 0 no-repeat padding-box;
+    &:hover {
+      background: transparent linear-gradient(95deg, #2C7A7B 0%, #2B6CB0 100%) 0 0 no-repeat padding-box;
+    }
+    &:disabled {
+      background: transparent linear-gradient(95deg, #B2F5EA 0%, #BEE3F8 100%) 0 0 no-repeat padding-box;
+    }
+    &:visited {
+      background: transparent linear-gradient(95deg, #285E61 0%, #2C5282 100%) 0 0 no-repeat padding-box;
+    }
+    &:active {
+      background: transparent linear-gradient(95deg, #285E61 0%, #2C5282 100%) 0 0 no-repeat padding-box;
+    }
+  }
+}
